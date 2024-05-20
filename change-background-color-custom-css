@@ -1,0 +1,25 @@
+Disse CUSTOM CSS ændrer baggrundsfarven på specifikke sider der er defineret via page-id-(sidens id)
+
+body.page-id-41 {
+    background-color: #FFF1E5 !important;
+}
+
+body.page-id-49 {
+    background-color: #FFF1E5 !important;
+}
+
+body.page-id-45 {
+    background-color: #FFF1E5 !important;
+}
+
+body.page-id-47 {
+    background-color: #FFF1E5 !important;
+}
+
+body.page-id-2505 {
+    background-color: #FFF1E5 !important;
+}
+
+body.page-id-62 {
+    background-color: #FFF1E5 !important;
+}

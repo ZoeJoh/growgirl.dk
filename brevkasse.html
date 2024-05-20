@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growgirl Nyhedbrev Sign Up</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <p>Navn</p>
+        <input class="box" type="text" id="name" placeholder="Nolia" required /><br />
+        <p>Email</p>
+        <input class="box" type="email" id="email_id" placeholder="nolia@growgirl.dk" required /><br />
+        <p>Dit Spørgsmål</p>
+        <textarea class="box" id="message" placeholder="Dit spørgsmål..." required></textarea><br />
+        <button onclick="SendMail()">Send</button> <!-- onclick="SendMail" forbinder button til JS længere nede -->
+        <!-- De ovenstående id="..." forbinder de forskellige <input> med vores JS -->
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+   <!-- Ovenstående script forbinder koden med emailJS -->
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "_bjSGIDR6YCBeAbZv", /* publicKey = vores bruger ID på emailJS - dette forbinder dette script med vores profil derinde */
+            });
+        })();  
+
+        function SendMail() { /* her forbindes button med JS */
+            var params = {
+                from_name: document.getElementById("name").value,
+                email_id: document.getElementById("email_id").value,
+                message: document.getElementById("message").value,
+            }
+            emailjs.send("service_vsgw1cl", "template_3881r2w", params) /* her bedes 'emailjs' om at 'sende' en mail fra "vores server ID hos emailJS", det skal være en specifik template "vores email template ID hos emailJS" og det skal sende vores params = den indtastede data til vores template og bruge dem i denne */
+                .then(function (res){
+                    alert("Dit brev er nu sendt afsted til brevkassen... " + res.status);
+                }) /* koples op op emailjs.send() og vises når emailen er sendt med succes. alert er den besked vi vil have der vises */
+                .catch(function(error) {
+                    console.log('FEJL...', error);
+                    alert('Noget gik galt. Prøv venligst igen.');
+                }); /* .catch(function(error){...}) specificerer en callback funktion hvis der opstår en fejl. console.log('FEJL...', error) logger den fejl der er registreret og aktiverer error beskeden som er defineret i 'alert' */
+        }
+    </script>
+
+
+</body>
+</html>

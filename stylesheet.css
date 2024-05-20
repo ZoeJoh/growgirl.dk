@@ -1,0 +1,50 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    padding: 24px;
+}
+
+/* Ovenstående er kun kodet som del af selvstændigt eksempel på koden, da elementor temaet har sine egne '*' og 'body' settings, som er kodet på forhånd */
+
+input, textarea, button {
+    padding: 8px;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px;
+    background-color: #FFF1E5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%; /* Kun sat som eksempel, dette er 100% i den indsatte kode i elementor */
+    background-color: #B8A2B5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+button {
+    display: flex;
+    max-width: 20%;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5A9A3;
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 300;
+    padding: 0 3px;
+}
+
+textarea {
+    min-height: 80px;
+}

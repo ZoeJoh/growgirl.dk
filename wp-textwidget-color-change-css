@@ -1,0 +1,5 @@
+Custom CSS: Ændrer tekstfarven der ellers er fast defineret på 'wordpress textwidget' i elementor designet. 
+
+selector .textwidget {
+   color: #FFFFFF;
+}

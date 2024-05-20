@@ -1,0 +1,82 @@
+Følgende script's er sat ind i en HTML sektion på diverse sider, der er designet i 'elementor editor' (elementor pro). Disse script's gør, at SVG hjerte ikonerne der er givet individuelle id navne "hearticon, hearticon2, hearticon3 etc.". Der er derefter custom kodet .clicked path, der styler hvilken farve der skiftes til når man klikker på ikonet. */
+
+CUSTOM CSS:
+
+.clicked path {
+    fill: #E5A9A3 !important; /* Skifter farven på SVG hjerte ikoner på siden, ved click - !important overskriver den eksisterende css kode på ikonet*/
+}
+
+HTML/JS :
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon2').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon3').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon4').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon5').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon6').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon7').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon8').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#hearticon9').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>

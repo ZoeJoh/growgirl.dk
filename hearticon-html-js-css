@@ -1,12 +1,20 @@
---> Følgende script's er sat ind i en HTML sektion på diverse sider, der er designet i 'elementor editor' (elementor pro). Disse script's gør, at SVG hjerte ikonerne der er givet individuelle id navne "hearticon, hearticon2, hearticon3 etc.". Der er derefter custom kodet .clicked path, der styler hvilken farve der skiftes til når man klikker på ikonet.
+--> Disse Java Script's er sat ind i en HTML sektion på diverse sider, designet i 'elementor editor-plugin'/ 'hello elementor-theme'. De JS's gør, at SVG hjerte ikonerne der er givet individuelle ID navne "hearticon", "hearticon2", "hearticon3" osv.", skifter farve onClick. Derefter er der tilføjet en 'custom CCS code' ".clicked path", som styler hvilken farve der skiftes til, når der klikkes på ikonet.
 
 CUSTOM CSS:
+/* Skifter farven på SVG hjerte ikoner på siden, ved click - !important overskriver den eksisterende css kode på ikonet*/
 
 .clicked path {
-    fill: #E5A9A3 !important; /* Skifter farven på SVG hjerte ikoner på siden, ved click - !important overskriver den eksisterende css kode på ikonet*/
+    fill: #E5A9A3 !important; 
 }
 
+
 HTML/JS :
+/* jQuery(document).ready(function($) = at handlingen ikke udføres før dokumentet er indlæst og klart*/
+/* $ er nu et alias/forkortelse for jQuery*/
+/*  $('#hearticon') = Her refereres til #ID (Den der er givet til svg ikonerne), .on('click', function() = På click skal følgende fucntion startes på SVG'en med ID navnet*/
+/*{
+            $(this).toggleClass('clicked');
+        });  = Tilføjer den stylede class ved click på svg'en.*/
 
 <script>
     jQuery(document).ready(function($) {
